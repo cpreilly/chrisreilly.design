@@ -14,7 +14,7 @@ var fs = require('fs');
 
 gulp.task('stylus', function() {
 
-  gulp.src('sty/style.styl')
+  gulp.src('stylus/style.styl')
 
     .pipe(sourcemaps.init())
     .pipe(stylus()
@@ -22,7 +22,7 @@ gulp.task('stylus', function() {
       return {title: "Stylus error: " + error.name, message: error.message, sound: 'Pop' };
     })))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('public/css'))
     .pipe(sync.stream());
 });
 
@@ -32,7 +32,7 @@ gulp.task('sync', function() {
     notify: false,
     open: false,
     server: {
-      baseDir: './',
+      baseDir: 'public/',
     },
     ghostMode: {
       clicks: true,
@@ -43,8 +43,8 @@ gulp.task('sync', function() {
     scrollRestoreTechnique: 'cookie'
   });
 
-  gulp.watch('sty/**/*.styl', ['stylus']);
-  gulp.watch('**/*.html').on("change", reload);
+  gulp.watch('stylus/**/*.styl', ['stylus']);
+  gulp.watch('public/**/*.html').on("change", reload);
 
 });
 
