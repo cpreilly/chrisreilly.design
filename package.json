@@ -1,0 +1,28 @@
+{
+  "name": "chrisreilly.design",
+  "description": "chrisreilly.design portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cpreilly/chrisreilly.design.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "Kevin Olson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cpreilly/chrisreilly.design/issues"
+  },
+  "homepage": "https://github.com/cpreilly/chrisreilly.design#readme",
+  "dependencies": {
+    "browser-sync": "*",
+    "gulp-notify": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "*"
+  }
+
+}
